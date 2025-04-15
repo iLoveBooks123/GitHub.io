@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Affirmations - Shades of Emotions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+    body {
+      background: linear-gradient(to right, #f0f8ff, #e6f0ff);
+      color: #2c3e50;
+      padding-top: 80px;
+    }
+    .navbar {
+    position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 999;
+    }
+    .navbar img {
+      height: 50px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #35478c;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #35478c;
+      margin-bottom: 20px;
+    }
+
+    .affirmation-box {
+      background: white;
+      color: #35478c;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      font-size: 1.4rem;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+      min-height: 100px;
+    }
+
+    .btn {
+      margin-top: 10px;
+      background: #ffcc00;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #ffd93b;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background: #35478c;
+      color: white;
+    }
+
+    .blurb {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div style="display: flex; align-items: center;">
+      <img src="headbgremoved.png" alt="Logo" />
+      <h2>Shades of Emotion</h2>
+    </div>
+    <div>
+      <a href="index1.html">Home</a>
+      <a href="depression.html">Depression</a>
+      <a href="bipolar.html">Bipolar</a>
+      <a href="projects.html">Projects</a>
+      <a href="affirmations.html">Affirmations</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="contact.html">Social Media</a>
+    </div>
+  </div>
+
+  <!-- Affirmations Section -->
+  <section class="section">
+    <div class="blurb">
+        <h2>The Affirmation Project: A Social Experiment in Positivity</h2>
+        <p>In a world filled with stress and uncertainty, taking a moment to remind ourselves of our worth can have a profound impact on our mental health. This Affirmation Generator is part of an ongoing social experiment designed to explore the power of positive reinforcement. By presenting a new affirmation with each click, we encourage users to pause, reflect, and embrace a moment of self-love. This simple yet powerful practice aims to shift the mindset, reduce negativity, and ultimately foster a more positive outlook on life.</p>
+        <p>The results of this experiment may be subtle, but they can lead to long-term benefits in emotional resilience and self-esteem. Try it out for yourself — you might just discover how a few empowering words can change your day!</p>
+    </div>
+
+
+    <h1>Affirmation Generator</h1>
+    <div class="affirmation-box" id="affirmation">"You are worthy of love and care."</div>
+    <button class="btn" onclick="generateAffirmation()">✨ New Affirmation</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    💛 Keep growing. Keep glowing. 💛
+  </footer>
+
+  <script>
+    const affirmations = [
+      "You are worthy of love and care.",
+      "Your feelings are valid.",
+      "You are strong and growing.",
+      "You make a difference.",
+      "You can overcome anything.",
+      "You are more than enough."
+    ];
+
+    function generateAffirmation() {
+      const box = document.getElementById("affirmation");
+      const randomIndex = Math.floor(Math.random() * affirmations.length);
+      box.style.opacity = 0;
+      setTimeout(() => {
+        box.textContent = `\"${affirmations[randomIndex]}\"`;
+        box.style.opacity = 1;
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

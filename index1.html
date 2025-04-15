@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shades of Emotion - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+    body {
+      background: linear-gradient(to right, #f0f8ff, #e6f0ff);
+      color: #2c3e50;
+      padding-top: 80px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 999;
+    }
+    .navbar img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    .navbar h2 {
+      font-size: 1.5rem;
+      color: #35478c;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #35478c;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(120deg, #c2e9fb, #a1c4fd, #d4fc79, #96e6a1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      color: #1a1a2e;
+    }
+    .hero img {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-buttons a {
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 1rem;
+      transition: background 0.3s;
+    }
+    .btn-purple {
+      background-color: #6a5acd;
+      box-shadow: 0 4px 12px rgba(106, 90, 205, 0.4);
+    }
+    .btn-purple:hover {
+      background-color: #7e6edf;
+    }
+    .btn-teal {
+      background-color: #00bfa5;
+      box-shadow: 0 4px 12px rgba(0, 191, 165, 0.4);
+    }
+    .btn-teal:hover {
+      background-color: #1de9b6;
+    }
+
+    /* Affirmations Section */
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .affirmation-box {
+      background: white;
+      color: #35478c;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      font-size: 1.4rem;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+      min-height: 100px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background: #35478c;
+      color: white;
+    }
+
+    .btn {
+      background: #ffcc00;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffd93b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div style="display: flex; align-items: center;">
+      <img src="headbgremoved.png" alt="Logo" />
+      <h2>Shades of Emotion</h2>
+    </div>
+    <div>
+      <a href="index1.html">Home</a>
+      <a href="depression.html">Depression</a>
+      <a href="bipolar.html">Bipolar</a>
+      <a href="projects.html">Projects</a>
+      <a href="affirmations.html">Affirmations</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="contact.html">Social Media</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="headbgremoved.png" alt="Shades of Emotion Logo" />
+    <h1>Shades of Emotion</h1>
+    <p>A safe space for understanding mood disorders, healing with words, and lifting one another—one shade at a time.</p>
+    <div class="hero-buttons">
+      <a href="#affirmations" class="btn-purple">💬 Explore Affirmations</a>
+      <a href="depression.html" class="btn-teal">📘 Learn About Depression</a>
+    </div>
+  </section>
+
+  <!-- Affirmations Section -->
+  <section class="section" id="affirmations">
+    <h2>Affirmation Generator</h2>
+    <div class="affirmation-box" id="affirmation">"You are worthy of love and care."</div>
+    <button class="btn" onclick="generateAffirmation()">✨ New Affirmation</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    💛 Keep growing. Keep glowing. 💛
+  </footer>
+
+  <script>
+    const affirmations = [
+      "You are worthy of love and care.",
+      "Your feelings are valid.",
+      "You are strong and growing.",
+      "You make a difference.",
+      "You can overcome anything.",
+      "You are more than enough."
+    ];
+
+    function generateAffirmation() {
+      const box = document.getElementById("affirmation");
+      const randomIndex = Math.floor(Math.random() * affirmations.length);
+      box.style.opacity = 0;
+      setTimeout(() => {
+        box.textContent = `\"${affirmations[randomIndex]}\"`;
+        box.style.opacity = 1;
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

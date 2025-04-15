@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Shades of Emotions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+    body {
+      background: linear-gradient(to bottom, #f0f4f8, #e4e9f2);
+      color: #2c3e50;
+      padding-top: 80px;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 999;
+    }
+    .navbar img {
+      height: 50px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #35478c;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+    .main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+    .section h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+    .team-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .team-member {
+      background: #f9fbff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .team-member h4 {
+      margin: 10px 0 5px;
+      color: #35478c;
+    }
+    .team-member p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      background: #35478c;
+      color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: linear-gradient(to left top, #c988aa, #c482ab, #bd7dac, #b678ae, #ae73b0, #bb74a9, #c675a2, #cf789a, #dd8a8b, #dfa085, #d9b78d, #d1cda1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      color: #1a1a2e;
+    }
+
+
+    .hero img {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #334155;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #475569;
+}
+
+.cta-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #2563eb;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div style="display: flex; align-items: center;">
+      <img src="headbgremoved.png" alt="Logo" />
+      <h2>Shades of Emotion</h2>
+    </div>
+    <div>
+      <a href="index1.html">Home</a>
+      <a href="depression.html">Depression</a>
+      <a href="bipolar.html">Bipolar</a>
+      <a href="projects.html">Projects</a>
+      <a href="affirmations.html">Affirmations</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="contact.html">Social Media</a>
+    </div>
+  </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="headbgremoved.png" alt="Shades of Emotion Logo" />
+        <div class="hero-text">
+          <h1>About Us</h1>
+        </div>
+      </section>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <!-- Section: Mission -->
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>At Shades of Emotions, we’re committed to treating mental health with the same importance as physical health. Our mission is to raise awareness, reduce stigma, and provide resources that empower individuals to seek support and live fulfilling lives.
+        We believe mental health is essential to overall well-being, and everyone deserves access to the tools and support needed to thrive. Through advocacy and education, we create spaces for open conversations and work to build stronger, more resilient communities.
+        Join us in raising our voices for mental health and fostering compassion for all.</p>
+    </div>
+
+    <!-- Section: Who We Are -->
+    <div class="section">
+      <h2>Who We Are</h2>
+      <p>It all began with 4 young minds who recognized the need for a shift in how we view and approach mental health. Each of us came from different walks of life, but we all shared the same passion, to create a world where mental health is understood, accepted, and prioritized.
+        As we journeyed through our own personal experiences and witnessed the struggles of those around us, we realized how powerful awareness, education, and community support could be in breaking the stigma surrounding mental health. With this vision in mind, we set out to build a space that empowers individuals to take control of their mental well-being and find strength in shared understanding.
+         Together, we are building a future where no one feels alone in their journey.</p>
+    </div>
+
+    <!-- Section: Team -->
+    <section style="text-align: center; padding: 40px 20px; background-color: #f9f9f9;">
+        <h2 style="font-size: 32px; margin-bottom: 20px; color: #2c3e50;">Meet the Team</h2>
+        
+        <div style="max-width: 700px; margin: 0 auto;">
+          <img src="2f614e_78f11b80a58c442ba7c1992e2e640705~mv2.jpg.avif" alt="Team Photo" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 15px;">
+          <p style="font-size: 16px; color: #444;">
+            From the left - Vasundhara Kone, Rakshita Ekambaram, Rose Grynaviski, Neha Krishna Vanga
+          </p>
+        </div>
+      </section>
+      
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Shades of Emotions – Created with 💙 for HOSA
+  </footer>
+
+</body>
+</html>

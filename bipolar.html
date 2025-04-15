@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Depression - Shades of Emotions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+    body {
+      background: linear-gradient(to bottom, #dee7f5, #f1f5f9);
+      color: #2c3e50;
+      padding-top: 0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 999;
+    }
+
+    .navbar img {
+      height: 50px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #35478c;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+    height: 100vh;
+    background-image: linear-gradient(to left top, #1e181b, #413d40, #686568, #929193, #bfbfc0, #cbd0d8, #d2e4ee, #d7f8ff, #9cfbfd, #56fbe8, #00f9c0, #0ff486);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+
+    .main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      background: #f9f9ff;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .checklist input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .submit-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background-color: #35478c;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #2c3a6c;
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flip-card {
+      background: transparent;
+      width: 250px;
+      height: 150px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-front {
+      background: #e1ecf4;
+      font-weight: bold;
+    }
+
+    .flip-card-back {
+      background: #d6f5e6;
+      transform: rotateY(180deg);
+      font-size: 0.95rem;
+    }
+
+    .video-box {
+      margin-top: 20px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .video-box iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .team-member img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      background: #35478c;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+      .navbar a {
+        margin: 5px 0;
+      }
+      .card-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .posters {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .posters img {
+        max-width: 100%;
+        height: auto;
+        flex: 1 1 45%;
+    }
+
+    .hero-buttons a {
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 1rem;
+      transition: background 0.3s;
+    }
+
+    .btn-purple {
+      background-color: #6a5acd;
+      box-shadow: 0 4px 12px rgba(106, 90, 205, 0.4);
+    }
+    .btn-purple:hover {
+      background-color: #7e6edf;
+    }
+    .btn-teal {
+      background-color: #00bfa5;
+      box-shadow: 0 4px 12px rgba(0, 191, 165, 0.4);
+    }
+    .btn-teal:hover {
+      background-color: #1de9b6;
+    }
+
+
+    .hero img {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #334155;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #475569;
+}
+
+.cta-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #2563eb;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.indented-list {
+  padding-left: 2rem; /* This adds indentation */
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.symptoms-section {
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div style="display: flex; align-items: center;">
+      <img src="headbgremoved.png" alt="Logo" />
+      <h2>Shades of Emotion</h2>
+    </div>
+    <div>
+      <a href="index1.html">Home</a>
+      <a href="depression.html">Depression</a>
+      <a href="bipolar.html">Bipolar</a>
+      <a href="projects.html">Projects</a>
+      <a href="affirmations.html">Affirmations</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="contact.html">Social Media</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="headbgremoved.png" alt="Shades of Emotion Logo" />
+    <div class="hero-text">
+      <h1>Bipolar Disorder</h1>
+      <p>At Shades of Emotion, we create safe spaces for healing, understanding, and support.</p>
+      <div class="hero-buttons">
+        <a href="#bipolar" class="btn-purple">💬 What is it?</a>
+        <a href="#copingmethods" class="btn-teal">📘 How can we cope with it?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="section" id = "bipolar">
+      <h2>What is Bipolar Disorder</h2>
+      <p>Bipolar disorder is a condition with extreme mood swings between high energy state to low energy state, changing moods very quickly.</p>
+
+    </div>
+
+    <div class="section">
+      <h2>Do These Sound Familiar?</h2>
+      <form>
+        <ul class="checklist">
+          <li><label><input type="checkbox" name="symptom1"> Feeling very energetic or "on top of the world."</label></li>
+          <li><label><input type="checkbox" name="symptom2"> Feeling easily irritated or agitated.</label></li>
+          <li><label><input type="checkbox" name="symptom3"> Acting impulsively or making risky decisions.</label></li>
+          <li><label><input type="checkbox" name="symptom4"> Low energy or fatigue</label></li>
+          <li><label><input type="checkbox" name="symptom5"> Thoughts of self-harm</label></li>
+        </ul>
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <div class="symptoms-section">
+        <h2>Causes and Symptoms</h2>
+      
+        <h3>Manic Episodes (High Mood)</h3>
+        <ul class="indented-list">
+          <li>Feeling very energetic or "on top of the world."</li>
+          <li>Racing thoughts or jumping between ideas.</li>
+          <li>Acting impulsively or making risky decisions.</li>
+          <li>Needing less sleep but still feeling rested.</li>
+          <li>Feeling easily irritated or agitated.</li>
+          <li>Having an inflated sense of self-importance.</li>
+        </ul>
+      
+        <h3>Depressive Episodes (Low Mood)</h3>
+        <ul class="indented-list">
+          <li>Feeling sad, hopeless, or empty.</li>
+          <li>Losing interest in things once enjoyed.</li>
+          <li>Feeling very tired or drained.</li>
+          <li>Changes in appetite (either eating too much or too little).</li>
+          <li>Sleeping too much or having trouble sleeping.</li>
+          <li>Difficulty concentrating or making decisions.</li>
+          <li>Thoughts of death or suicide.</li>
+        </ul>
+      </div>
+        
+    </div>
+
+    <div class="section" id = "copingmethods">
+      <h2>Helpful Coping Techniques</h2>
+      <div class="card-grid">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">Create a Routine</div>
+            <div class="flip-card-back">Establish Regular Sleep Patterns: Try to wake up and go to bed at the same time each day. Consistent sleep patterns can help manage mood swings.</div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">Journaling</div>
+            <div class="flip-card-back">Write down thoughts, even small ones, to process emotions.</div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">Build a Support Network</div>
+            <div class="flip-card-back">Friends, family, or a counselor can offer support and relief.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Further Information</h2>
+      <p>Additional Information on depression is linked to our Instagram page, Spotify podcast, and on TikTok. Please do check out for more information over there!
+        For your convenience we have listed the crisis lines below.
+        Please remember to seek support from your local group or any trusted adult.</p>
+        <img src = "d556eb_6dd913d5f2f9435fb96417698b8556c1~mv2.png.avif" alt = "Crisis Lines" class = center>
+        "
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Shades of Emotions — Raising Awareness One Step at a Time
+  </footer>
+
+</body>
+</html>
